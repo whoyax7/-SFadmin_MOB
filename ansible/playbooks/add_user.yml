@@ -4,7 +4,5 @@
   tasks:
 
   - name: Add user to remote hosts
-    user: name=mentor groups=sudo shell=/bin/bash
+    user: name=user groups=sudo shell=/bin/bash
 
-  - name: Add SSH keys to remote hosts
-    authorized_key: user=mentor key="{{ lookup('file', "/etc/ansible/common/files/id_rsa.pub") }}"
